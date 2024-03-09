@@ -25,3 +25,19 @@ function pascal_splitter(text_input) {
 }
 
 pascal_splitter('SplitMeIfYouCanHaHaYouCantOrYouCan')
+
+
+// SOLVED_WITH_REGEX
+
+// function pascal_splitter(text_input) {
+//     let pattern = /[A-Z][a-z]*/g
+//     let result = []
+
+//     let matches = text_input.matchAll(pattern)
+
+//     for (item of matches) {
+//         result.push(item[0])
+//     }
+
+//     console.log(result.join(', '))
+// }
