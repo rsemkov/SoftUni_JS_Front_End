@@ -2,18 +2,16 @@ function solve(searched_word, the_sentence) {
     let words_array = the_sentence.split(' ');
     let word_found = false;
 
-    for (let word of words_array) {
-        if (word.toLowerCase() === searched_word.toLowerCase()) {
-            word_found = true;
-            console.log(searched_word);
-            break
-        }
-    }
+    let matches_found = words_array.filter(word => word.toLowerCase() === searched_word.toLowerCase())
 
-    if (word_found === false) {
+    if (matches_found.length > 0) {
+        console.log(matches_found[0]);
+    } else {
         console.log(`${searched_word} not found!`);
     }
 }
 
 solve('python',
-'JavaScript is the best programming language'	)
+'JavaScript is the best programming python'	)
+
+

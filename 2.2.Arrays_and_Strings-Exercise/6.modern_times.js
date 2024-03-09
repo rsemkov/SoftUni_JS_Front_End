@@ -1,16 +1,9 @@
 function solve(the_sentence) {
-    let words_array = the_sentence.split(' ')
-    let result_array = []
+    let pattern = /#([a-zA-Z]+)/g
+    let result = the_sentence.matchAll(pattern)
 
-    for (let word of words_array) {
-        
-        if (/^#[a-zA-Z]+$/.test(word)) {
-            result_array.push(word)
-        }
-    }
-
-    for (let item of result_array) {
-        console.log(item.slice(1));
+    for (item of result) {
+        console.log(item[1]);
     }
 }
 
